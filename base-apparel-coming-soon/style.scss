@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+$Soft-Red: hsl(0, 93%, 68%);
+$Desaturated-Red: hsl(0, 36%, 70%);
+$Dark-Grayish-Red: hsl(0, 6%, 24%);
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  body {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.logo {
+  margin: 35px;
+  img {
+    width: 35%;
+  }
+}
+.image {
+  background-image: url('/images/hero-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 14px;
+  color: $Desaturated-Red;
+  line-height: 1.5;
+}
+
+.title {
+  text-align: center;
+  margin-top: 60px;
+  letter-spacing: 0.5ch;
+  font-size: 2.5em;
+  color: $Dark-Grayish-Red;
+  .title1 {
+    font-weight: 100;
+    color: $Desaturated-Red;
+  }
+}
+
+.email {
+  position: relative;
+  margin: 35px;
+  input {
+    font-size: 15px;
+    padding-left: 5%;
+    opacity: 0.6;
+    width: 90%;
+    height: 45px;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-color: $Desaturated-Red;
+    border-width: 1px;
+    border-style: solid;
+    border-right: none;
+    &::placeholder {
+      color: $Desaturated-Red;
+      padding: 20px;
+    }
+  }
+
+  button {
+    position: absolute;
+    height: 50px;
+    width: 23%;
+    border-radius: 35px;
+    border-style: none;
+    background-image: url('/images/icon-arrow.svg'),
+      linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url('/images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .pattern {
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-auto-rows: auto auto auto 1fr;
+    .logo {
+      margin: 0;
+      margin-top: 10%;
+      grid-column: 1;
+      grid-row: 1;
+      img {
+        width: 200px;
+      }
+    }
+    .image {
+      grid-column: 2;
+      grid-row: 1 / 5;
+      background-image: url('./images/hero-desktop.jpg');
+      height: 100vh;
+    }
+    .title {
+      margin-top: 15%;
+      grid-column: 1;
+      grid-row: 2;
+      text-align: left;
+      font-size: 80px;
+    }
+    .subtitle {
+      margin: 0;
+      margin-top: 5%;
+      padding-right: 35%;
+      grid-column: 1;
+      grid-row: 3;
+      text-align: left;
+      font-size: 20px;
+      margin-right: 9%;
+    }
+    .email {
+      margin: 0;
+      margin-top: 5%;
+      grid-column: 1;
+      grid-row: 4;
+      input {
+        width: 50%;
+        height: 60px;
+      }
+      button {
+        width: 12%;
+        height: 65px;
+      }
+    }
+  }
+}
